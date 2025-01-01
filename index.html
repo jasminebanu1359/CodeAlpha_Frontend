@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: pink;
+      color: blue;
+    }
+    .gallery {
+      position: relative;
+      width: 600px; 
+      margin: 50px auto;
+      overflow: hidden;
+      border: 1px solid bisque;
+    }
+    .gallery img {
+      width: 100%; 
+      max-width: 40%; 
+      height: auto; 
+      display: none;
+
+    }
+    .gallery img.active {
+      display: block;
+      margin: auto;
+    }
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .nav-btn.prev {
+      left: 10px;
+    }
+    .nav-btn.next {
+      right: 10px;
+    }
+    .nav-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <div class="gallery">
+    <img src="doll1.jpeg" alt="Image 1" class="active">
+    <img src="doll2.jpeg" alt="Image 2">
+    <img src="doll3.jpeg" alt="Image 3">
+    <img src="doll4.jpeg" alt="Image 4">
+    <button class="nav-btn prev">Prev</button>
+    <button class="nav-btn next">Next</button>
+  </div>
+  <script>
+    const images = document.querySelectorAll('.gallery img');
+    const prevBtn = document.querySelector('.nav-btn.prev');
+    const nextBtn = document.querySelector('.nav-btn.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+  </script>
+</body>
+</html>
