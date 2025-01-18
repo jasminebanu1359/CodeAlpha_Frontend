@@ -1,0 +1,106 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("bg.jpeg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  header {
+    padding-left: 20px;
+    margin: 40px;
+  }
+  
+  .logo {
+    font-size: 40px;
+    display: inline-block;
+    color: rgb(91, 91, 229);
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  
+  .nav-links {
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+    padding: 15px;
+    font-size: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-left: 50px;
+    text-decoration: none;
+    padding: 5px;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px;
+  }
+  
+  .profile-left {
+    width: 40%;
+    text-align: center;
+  }
+  
+  img{
+    width: 400px;
+    height: 400px;
+    margin-left: 70px;
+
+  }
+  
+  .profile-right {
+    width: 50%;
+  }
+  
+  .name-highlight {
+    color: blue;
+  }
+  
+  .title {
+    font-size: medium;
+    color: rgb(0, 160, 214);
+  }
+  
+  .description {
+    color: black;
+  }
+  
+  .buttons {
+    margin: 20px 0;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-hire {
+    background-color: rgb(118, 72, 226);
+    color: white;
+  }
+  
+  .btn-projects {
+    background-color: azure;
+    border: 2px solid lightblue;
+    color: blue;
+  }
+  
+  .social-icons{
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: blue;
+  }
+  
+  
